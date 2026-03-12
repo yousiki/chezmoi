@@ -1,0 +1,5 @@
+[".config/btop/themes/catppuccin_mocha.theme"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/btop/cf50077d8d50e009b5f58aad4bb32603db895f17/themes/catppuccin_mocha.theme"
+[".config/btop/themes/catppuccin_mocha.theme".checksum]
+sha256 = "4c7469ab9bda282c1ff606aca37c9c0b84cd0cb66d041e4e7e1fed39791f4644"
