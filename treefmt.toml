@@ -1,14 +1,14 @@
 [formatter.shell]
-command = "shfmt"
-options = ["-w", "-i", "2", "-ci"]
+command = "bunx"
+options = ["shfmt", "-w", "-i", "2", "-ci"]
 includes = ["*.sh", "*.zsh", "*.bash", "*.sh.tmpl"]
 
 [formatter.toml]
-command = "taplo"
-options = ["format"]
+command = "bunx"
+options = ["taplo", "format"]
 includes = ["*.toml"]
 
 [formatter.markdown]
-command = "prettier"
-options = ["--write"]
+command = "bunx"
+options = ["prettier", "--write"]
 includes = ["*.md"]
