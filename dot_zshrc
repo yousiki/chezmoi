@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+# Interactive configuration lives here. Login-only environment belongs in ~/.zprofile.
+case $- in
+  *i*) ;;
+  *) return ;;
+esac
+
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export ZSH_CONFIG_DIR="${XDG_CONFIG_HOME}/zsh"
+
+typeset -a zsh_config_files=(
+  "$ZSH_CONFIG_DIR/00-env.zsh"
+  "$ZSH_CONFIG_DIR/10-options.zsh"
+  "$ZSH_CONFIG_DIR/20-history.zsh"
+  "$ZSH_CONFIG_DIR/30-completion.zsh"
+  "$ZSH_CONFIG_DIR/40-bindings.zsh"
+  "$ZSH_CONFIG_DIR/50-tools.zsh"
+  "$ZSH_CONFIG_DIR/60-aliases.zsh"
+  "$ZSH_CONFIG_DIR/70-zinit.zsh"
+  "$ZSH_CONFIG_DIR/75-plugins.zsh"
+  "$ZSH_CONFIG_DIR/80-prompt.zsh"
+)
+
+for config_file in $zsh_config_files; do
+  [[ -r "$config_file" ]] && source "$config_file"
+done

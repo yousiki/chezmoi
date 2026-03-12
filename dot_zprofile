@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# Login shells set up environment that should exist before ~/.zshrc runs.
+# macOS terminals usually start login shells; nested interactive shells often do not.
+if command -v brew >/dev/null 2>&1; then
+  eval "$(brew shellenv)"
+fi
+
+# OrbStack integrates at login time because its shell hooks affect the session environment.
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
