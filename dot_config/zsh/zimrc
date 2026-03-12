@@ -1,0 +1,18 @@
+zmodule homebrew
+zmodule utility
+zmodule exa
+zmodule git
+zmodule environment
+zmodule direnv
+zmodule ssh
+zmodule vietz-dev/zim-zoxide
+zmodule joke/zim-chezmoi
+zmodule joke/zim-github-cli
+zmodule completion
+zmodule input --if '[[ -t 0 && -t 1 ]]'
+zmodule fzf --if '[[ -t 0 && -t 1 ]]'
+zmodule smite --if '[[ -t 0 && -t 1 ]]'
+zmodule magic-enter --if '[[ -t 0 && -t 1 ]]'
+zmodule joke/zim-starship --if '[[ -t 0 && -t 1 ]]'
+zmodule zsh-users/zsh-autosuggestions --if '[[ -t 0 && -t 1 ]]'
+zmodule zsh-users/zsh-syntax-highlighting --if '[[ -t 0 && -t 1 ]]'
