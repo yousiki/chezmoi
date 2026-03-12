@@ -1,12 +1,28 @@
+tree-root-file = ".git/config"
+excludes = ["**/symlink_*"]
+
 [formatter.shell]
 command = "bunx"
 options = ["shfmt", "-w", "-i", "2", "-ci"]
-includes = ["*.sh", "*.zsh", "*.bash", "*.sh.tmpl"]
+includes = [
+  "*.sh",
+  "*.zsh",
+  "*.bash",
+  "*.sh.tmpl",
+  "dot_zshrc",
+  "dot_zprofile",
+  "zimrc",
+]
 
 [formatter.toml]
 command = "bunx"
 options = ["taplo", "format"]
 includes = ["*.toml"]
+
+[formatter.json]
+command = "bunx"
+options = ["prettier", "--write"]
+includes = ["*.json"]
 
 [formatter.markdown]
 command = "bunx"

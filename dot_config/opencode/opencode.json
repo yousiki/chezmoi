@@ -47,34 +47,12 @@
     },
     "oxfmt": {
       "disabled": true,
-      "command": [
-        "bunx",
-        "--package",
-        "oxfmt",
-        "oxfmt",
-        "--write",
-        "$FILE"
-      ],
-      "extensions": [
-        ".js",
-        ".jsx",
-        ".ts",
-        ".tsx"
-      ]
+      "command": ["bunx", "--package", "oxfmt", "oxfmt", "--write", "$FILE"],
+      "extensions": [".js", ".jsx", ".ts", ".tsx"]
     },
     "ruff": {
-      "command": [
-        "uvx",
-        "--from",
-        "ruff",
-        "ruff",
-        "format",
-        "$FILE"
-      ],
-      "extensions": [
-        ".py",
-        ".pyi"
-      ]
+      "command": ["uvx", "--from", "ruff", "ruff", "format", "$FILE"],
+      "extensions": [".py", ".pyi"]
     },
     "uv": {
       "disabled": true
@@ -120,13 +98,7 @@
       ]
     },
     "oxlint": {
-      "command": [
-        "bunx",
-        "--package",
-        "oxlint",
-        "oxlint",
-        "--lsp"
-      ]
+      "command": ["bunx", "--package", "oxlint", "oxlint", "--lsp"]
     },
     "vue": {
       "command": [
@@ -167,20 +139,9 @@
       ]
     },
     "ruff": {
-      "command": [
-        "uvx",
-        "--from",
-        "ruff",
-        "ruff",
-        "server"
-      ],
-      "extensions": [
-        ".py",
-        ".pyi"
-      ]
+      "command": ["uvx", "--from", "ruff", "ruff", "server"],
+      "extensions": [".py", ".pyi"]
     }
   },
-  "plugin": [
-    "oh-my-opencode"
-  ]
+  "plugin": ["oh-my-opencode"]
 }
