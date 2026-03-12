@@ -1,5 +1,31 @@
-[".config/btop/themes/catppuccin_mocha.theme"]
-type = "file"
-url = "https://raw.githubusercontent.com/catppuccin/btop/cf50077d8d50e009b5f58aad4bb32603db895f17/themes/catppuccin_mocha.theme"
-[".config/btop/themes/catppuccin_mocha.theme".checksum]
-sha256 = "4c7469ab9bda282c1ff606aca37c9c0b84cd0cb66d041e4e7e1fed39791f4644"
+[".config/bat/themes"]
+type = "archive"
+url = "https://github.com/catppuccin/bat/archive/refs/heads/main.tar.gz"
+exact = true
+stripComponents = 2
+include = ["*/themes/*.tmTheme"]
+refreshPeriod = "168h"
+
+[".config/btop/themes"]
+type = "archive"
+url = "https://github.com/catppuccin/btop/archive/refs/heads/main.tar.gz"
+exact = true
+stripComponents = 2
+include = ["*/themes/*.theme"]
+refreshPeriod = "168h"
+
+[".config/gitui/themes"]
+type = "archive"
+url = "https://github.com/catppuccin/gitui/archive/refs/heads/main.tar.gz"
+exact = true
+stripComponents = 2
+include = ["*/themes/catppuccin-*.ron"]
+refreshPeriod = "168h"
+
+[".config/yazi/catppuccin"]
+type = "archive"
+url = "https://github.com/catppuccin/yazi/archive/refs/heads/main.tar.gz"
+exact = true
+stripComponents = 3
+include = ["*/themes/*/*.toml"]
+refreshPeriod = "168h"
