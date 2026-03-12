@@ -1,3 +1,7 @@
-theme = dark:Catppuccin Mocha,light:Catppuccin Frappe
 background-opacity = 0.9
+copy-on-select = true
 font-family = Maple Mono NF CN
+macos-titlebar-style = tabs
+selection-clear-on-copy = true
+shell-integration-features = true
+theme = dark:Catppuccin Mocha,light:Catppuccin Frappe

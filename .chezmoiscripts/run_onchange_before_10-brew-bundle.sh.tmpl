@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 {{- if eq .chezmoi.os "darwin" }}
+# Install Homebrew packages from Brewfile
+
 set -eu
 
 if ! command -v brew >/dev/null 2>&1; then
@@ -8,9 +10,11 @@ if ! command -v brew >/dev/null 2>&1; then
   exit 0
 fi
 
-brew bundle --file=/dev/stdin <<'EOF'
+brew bundle --cleanup --zap --force --file=/dev/stdin <<'EOF'
 {{ include "dot_config/homebrew/Brewfile" -}}
 EOF
 {{- else }}
+# Skip brew bundle on non-darwin platforms
+
 exit 0
 {{- end }}
