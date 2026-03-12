@@ -1,0 +1,19 @@
+{{- if eq .chezmoi.os "darwin" }}
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+{{- end }}
+{{- if eq .chezmoi.os "linux" }}
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+{{- end }}
+[user]
+	name = yousiki
+	email = you.siki@outlook.com
