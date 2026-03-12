@@ -78,8 +78,6 @@ macOS packages are managed with a Homebrew `Brewfile`.
 
 - [dot_config/homebrew/Brewfile](/Users/yousiki/.local/share/chezmoi/dot_config/homebrew/Brewfile)
   is the source of truth.
-- [`.chezmoiscripts/run_once_before_00-install-homebrew.sh.tmpl`](/Users/yousiki/.local/share/chezmoi/.chezmoiscripts/run_once_before_00-install-homebrew.sh.tmpl)
-  bootstraps Homebrew if needed.
 - [`.chezmoiscripts/run_onchange_before_10-brew-bundle.sh.tmpl`](/Users/yousiki/.local/share/chezmoi/.chezmoiscripts/run_onchange_before_10-brew-bundle.sh.tmpl)
   applies the `Brewfile` on macOS when the package list changes.
 
