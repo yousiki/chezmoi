@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+{{- if eq .chezmoi.os "darwin" }}
+set -eu
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "brew is not installed; skipping brew bundle" >&2
+  exit 0
+fi
+
+brew bundle --file=/dev/stdin <<'EOF'
+{{ include "dot_config/homebrew/Brewfile" -}}
+EOF
+{{- else }}
+exit 0
+{{- end }}
