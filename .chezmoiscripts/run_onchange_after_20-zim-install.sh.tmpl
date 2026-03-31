@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+
+set -eu
+
+# zimrc hash: {{ include "dot_config/zsh/zimrc" | sha256sum }}
+
+export ZIM_CONFIG_FILE="${HOME}/.config/zsh/zimrc"
+export ZIM_HOME="${HOME}/.zim"
+
+zimfw_script=
+
+if command -v brew >/dev/null 2>&1; then
+  brew_prefix="$(brew --prefix 2>/dev/null)"
+  [[ -n "$brew_prefix" ]] && zimfw_script="${brew_prefix}/opt/zimfw/share/zimfw.zsh"
+elif [[ -n "${HOMEBREW_PREFIX:-}" ]]; then
+  zimfw_script="${HOMEBREW_PREFIX}/opt/zimfw/share/zimfw.zsh"
+fi
+
+if [[ -z "$zimfw_script" || ! -r "$zimfw_script" ]]; then
+  zimfw_script="${ZIM_HOME}/zimfw.zsh"
+fi
+
+if [[ ! -r "$zimfw_script" ]]; then
+  echo "zimfw not found; skipping zim install" >&2
+  exit 0
+fi
+
+source "$zimfw_script" install -q
+source "$zimfw_script" build -q

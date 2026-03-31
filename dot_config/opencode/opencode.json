@@ -15,6 +15,11 @@
       "enabled": true,
       "type": "remote",
       "url": "https://huggingface.co/mcp?login"
+    },
+    "deepwiki": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp"
     }
   },
   "lsp": {

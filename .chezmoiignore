@@ -5,3 +5,4 @@ docs/**
 .sisyphus/**
 .gitignore
 treefmt.toml
+.config/opencode/package.json
