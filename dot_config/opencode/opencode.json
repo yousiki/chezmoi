@@ -1,4 +1,42 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-claude-auth", "oh-my-openagent@latest"]
+  "plugin": ["opencode-claude-auth", "oh-my-openagent@latest"],
+  "mcp": {
+    "duckduckgo": {
+      "enabled": true,
+      "type": "local",
+      "command": ["uvx", "duckduckgo-mcp-server@latest"],
+      "environment": {
+        "DDG_SAFE_SEARCH": "STRICT",
+        "DDG_REGION": "cn-zh"
+      }
+    },
+    "huggingface": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://huggingface.co/mcp?login"
+    }
+  },
+  "lsp": {
+    "ty": {
+      "command": ["uvx", "ty@latest", "server"],
+      "extensions": [".py", ".pyi"]
+    },
+    "basedpyright": {
+      "command": [
+        "bunx",
+        "-p",
+        "basedpyright@latest",
+        "basedpyright-langserver",
+        "--stdio"
+      ],
+      "extensions": [".py", ".pyi"]
+    }
+  },
+  "formatter": {
+    "ruff": {
+      "command": ["uvx", "ruff", "format", "$FILE"],
+      "extensions": [".py", ".pyi"]
+    }
+  }
 }
