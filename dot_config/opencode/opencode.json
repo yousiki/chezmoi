@@ -21,16 +21,6 @@
       "type": "remote",
       "url": "https://mcp.deepwiki.com/mcp"
     },
-    "fetch": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://remote.mcpservers.org/fetch/mcp"
-    },
-    "sequential_thinking": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://remote.mcpservers.org/sequentialthinking/mcp"
-    },
     "edgeone_pages": {
       "enabled": true,
       "type": "remote",
@@ -58,5 +48,10 @@
       "command": ["uvx", "ruff", "format", "$FILE"],
       "extensions": [".py", ".pyi"]
     }
+  },
+  "autoupdate": "notify",
+  "experimental": {
+    "batch_tool": true,
+    "continue_loop_on_deny": true
   }
 }
