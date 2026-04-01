@@ -1,0 +1,1 @@
+export ANTHROPIC_ENABLE_1M_CONTEXT=true
