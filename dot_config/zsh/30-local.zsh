@@ -9,3 +9,7 @@ fi
 if [[ -t 0 && -t 1 ]] && command -v mcfly >/dev/null 2>&1; then
   eval "$(mcfly init zsh)"
 fi
+
+if [[ -f $HOME/.openclaw/completions/openclaw.zsh ]]; then
+  source "$HOME/.openclaw/completions/openclaw.zsh"
+fi
