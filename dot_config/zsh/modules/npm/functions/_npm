@@ -1,0 +1,23 @@
+#compdef npm
+
+local cache_dir cache_file
+
+if ! command -v npm >/dev/null 2>&1; then
+  return 1
+fi
+
+cache_dir="${ZSH_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/zsh}/completion"
+cache_file="${cache_dir}/_npm"
+
+mkdir -p "$cache_dir"
+
+if [[ ! -s "$cache_file" || "$cache_file" -ot "${commands[npm]}" ]]; then
+  command npm completion >| "$cache_file" 2>/dev/null || return 1
+fi
+
+[[ -s "$cache_file" ]] || return 1
+
+unfunction _npm 2>/dev/null || :
+source "$cache_file"
+
+_npm "$@"

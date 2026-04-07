@@ -9,6 +9,7 @@ zmodule vietz-dev/zim-zoxide
 zmodule joke/zim-chezmoi
 zmodule joke/zim-github-cli
 zmodule "${ZSH_CONFIG_DIR}/modules/bun"
+zmodule "${ZSH_CONFIG_DIR}/modules/npm"
 zmodule completion
 zmodule input --if '[[ -t 0 && -t 1 ]]'
 zmodule fzf --if '[[ -t 0 && -t 1 ]]'
