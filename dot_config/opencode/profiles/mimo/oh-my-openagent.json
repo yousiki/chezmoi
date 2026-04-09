@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "hashline_edit": true,
+  "model_fallback": true,
+  "browser_automation_engine": {
+    "provider": "agent-browser"
+  },
+  "tmux": {
+    "enabled": true,
+    "layout": "main-vertical",
+    "main_pane_size": 60,
+    "main_pane_min_width": 120,
+    "agent_pane_min_width": 40,
+    "isolation": "session"
+  },
+  "git_master": {
+    "commit_footer": true,
+    "include_co_authored_by": true,
+    "git_env_prefix": "GIT_MASTER=1"
+  },
+  "runtime_fallback": true,
+  "claude_code": {
+    "mcp": false,
+    "commands": false,
+    "skills": false,
+    "agents": false,
+    "hooks": false,
+    "plugins": false
+  },
+  "experimental": {
+    "dynamic_context_pruning": {
+      "enabled": true,
+      "notification": "detailed",
+      "protected_tools": [
+        "task",
+        "todowrite",
+        "todoread",
+        "lsp_rename",
+        "session_read",
+        "session_write",
+        "session_search"
+      ]
+    }
+  },
+  "agents": {
+    "sisyphus": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "hephaestus": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "oracle": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "librarian": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "explore": {
+      "model": "xiaomi/mimo-v2-flash"
+    },
+    "multimodal-looker": {
+      "model": "xiaomi/mimo-v2-omni"
+    },
+    "prometheus": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "metis": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "momus": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "atlas": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "sisyphus-junior": {
+      "model": "xiaomi/mimo-v2-pro"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "ultrabrain": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "deep": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "artistry": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "quick": {
+      "model": "xiaomi/mimo-v2-flash"
+    },
+    "unspecified-low": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "unspecified-high": {
+      "model": "xiaomi/mimo-v2-pro"
+    },
+    "writing": {
+      "model": "xiaomi/mimo-v2-flash"
+    }
+  }
+}
