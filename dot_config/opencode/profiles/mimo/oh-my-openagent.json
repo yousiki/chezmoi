@@ -53,7 +53,7 @@
       "model": "xiaomi/mimo-v2-pro"
     },
     "librarian": {
-      "model": "xiaomi/mimo-v2-pro"
+      "model": "xiaomi/mimo-v2-flash"
     },
     "explore": {
       "model": "xiaomi/mimo-v2-flash"
@@ -88,7 +88,7 @@
       "model": "xiaomi/mimo-v2-pro"
     },
     "artistry": {
-      "model": "xiaomi/mimo-v2-pro"
+      "model": "xiaomi/mimo-v2-omni"
     },
     "quick": {
       "model": "xiaomi/mimo-v2-flash"
@@ -100,7 +100,7 @@
       "model": "xiaomi/mimo-v2-pro"
     },
     "writing": {
-      "model": "xiaomi/mimo-v2-flash"
+      "model": "xiaomi/mimo-v2-omni"
     }
   }
 }
