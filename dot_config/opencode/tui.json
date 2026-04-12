@@ -7,8 +7,8 @@
       {
         "enabled": true,
         "fg": true,
-        "bg": true,
-        "speed": 0.008,
+        "bg": false,
+        "speed": 0.004,
         "turns": 3,
         "glow": 0.05,
         "keybinds": {

@@ -7,8 +7,16 @@
   },
   "formatter": {
     "ruff": {
-      "command": ["uvx", "ruff", "format", "$FILE"],
-      "extensions": [".py", ".pyi"]
+      "command": [
+        "uvx",
+        "ruff",
+        "format",
+        "$FILE"
+      ],
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
     }
   },
   "lsp": {
@@ -20,11 +28,21 @@
         "basedpyright-langserver",
         "--stdio"
       ],
-      "extensions": [".py", ".pyi"]
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
     },
     "ty": {
-      "command": ["uvx", "ty@latest", "server"],
-      "extensions": [".py", ".pyi"]
+      "command": [
+        "uvx",
+        "ty@latest",
+        "server"
+      ],
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
     }
   },
   "mcp": {
@@ -34,7 +52,10 @@
       "url": "https://mcp.deepwiki.com/mcp"
     },
     "duckduckgo": {
-      "command": ["uvx", "duckduckgo-mcp-server@latest"],
+      "command": [
+        "uvx",
+        "duckduckgo-mcp-server@latest"
+      ],
       "enabled": true,
       "environment": {
         "DDG_REGION": "cn-zh",
@@ -53,5 +74,8 @@
       "url": "https://huggingface.co/mcp?login"
     }
   },
-  "plugin": ["opencode-claude-auth@latest", "oh-my-openagent@latest"]
+  "plugin": [
+    "opencode-claude-auth@latest",
+    "oh-my-openagent@latest"
+  ]
 }
