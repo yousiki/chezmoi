@@ -1,37 +1,17 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-claude-auth@latest", "oh-my-openagent@latest"],
-  "mcp": {
-    "duckduckgo": {
-      "enabled": true,
-      "type": "local",
-      "command": ["uvx", "duckduckgo-mcp-server@latest"],
-      "environment": {
-        "DDG_SAFE_SEARCH": "STRICT",
-        "DDG_REGION": "cn-zh"
-      }
-    },
-    "huggingface": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://huggingface.co/mcp?login"
-    },
-    "deepwiki": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://mcp.deepwiki.com/mcp"
-    },
-    "edgeone_pages": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://remote.mcpservers.org/edgeone-pages/mcp"
+  "autoupdate": "notify",
+  "experimental": {
+    "batch_tool": true,
+    "continue_loop_on_deny": true
+  },
+  "formatter": {
+    "ruff": {
+      "command": ["uvx", "ruff", "format", "$FILE"],
+      "extensions": [".py", ".pyi"]
     }
   },
   "lsp": {
-    "ty": {
-      "command": ["uvx", "ty@latest", "server"],
-      "extensions": [".py", ".pyi"]
-    },
     "basedpyright": {
       "command": [
         "bunx",
@@ -41,17 +21,37 @@
         "--stdio"
       ],
       "extensions": [".py", ".pyi"]
-    }
-  },
-  "formatter": {
-    "ruff": {
-      "command": ["uvx", "ruff", "format", "$FILE"],
+    },
+    "ty": {
+      "command": ["uvx", "ty@latest", "server"],
       "extensions": [".py", ".pyi"]
     }
   },
-  "autoupdate": "notify",
-  "experimental": {
-    "batch_tool": true,
-    "continue_loop_on_deny": true
-  }
+  "mcp": {
+    "deepwiki": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp"
+    },
+    "duckduckgo": {
+      "command": ["uvx", "duckduckgo-mcp-server@latest"],
+      "enabled": true,
+      "environment": {
+        "DDG_REGION": "cn-zh",
+        "DDG_SAFE_SEARCH": "STRICT"
+      },
+      "type": "local"
+    },
+    "edgeone_pages": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://remote.mcpservers.org/edgeone-pages/mcp"
+    },
+    "huggingface": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://huggingface.co/mcp?login"
+    }
+  },
+  "plugin": ["opencode-claude-auth@latest", "oh-my-openagent@latest"]
 }
