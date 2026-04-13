@@ -1,20 +1,4 @@
 {
   "$schema": "https://opencode.ai/tui.json",
-  "theme": "catppuccin",
-  "plugin": [
-    [
-      "oc-plugin-rainbow",
-      {
-        "enabled": true,
-        "fg": true,
-        "bg": false,
-        "speed": 0.004,
-        "turns": 3,
-        "glow": 0.05,
-        "keybinds": {
-          "logo_splash": "ctrl+shift+r"
-        }
-      }
-    ]
-  ]
+  "theme": "catppuccin"
 }
