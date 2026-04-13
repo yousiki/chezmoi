@@ -2,15 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "xiaomi/mimo-v2-pro",
       "fallback_models": [
         {
           "model": "openai/gpt-5.4",
           "variant": "medium"
         },
+        "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5.1",
         "zhipuai-coding-plan/glm-5.1",
-        "xiaomi/mimo-v2-pro",
         "opencode/big-pickle"
       ]
     },
@@ -97,27 +97,25 @@
       ]
     },
     "atlas": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "openai/gpt-5.4",
+      "variant": "medium",
       "fallback_models": [
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
+        "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5.1",
         "zhipuai-coding-plan/glm-5.1",
         "xiaomi/mimo-v2-pro"
       ]
     },
     "sisyphus-junior": {
-      "model": "kimi-for-coding/k2p5",
+      "model": "xiaomi/mimo-v2-pro",
       "fallback_models": [
         {
           "model": "openai/gpt-5.4",
           "variant": "medium"
         },
+        "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5.1",
         "zhipuai-coding-plan/glm-5.1",
-        "xiaomi/mimo-v2-pro",
         "opencode/big-pickle"
       ]
     }
@@ -127,24 +125,24 @@
       "model": "github-copilot/gemini-3.1-pro-preview",
       "variant": "high",
       "fallback_models": [
+        "xiaomi/mimo-v2-pro",
         "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5.1",
-        "zhipuai-coding-plan/glm-5.1",
-        "xiaomi/mimo-v2-pro"
+        "zhipuai-coding-plan/glm-5.1"
       ]
     },
     "ultrabrain": {
       "model": "openai/gpt-5.4",
       "variant": "xhigh",
       "fallback_models": [
+        "xiaomi/mimo-v2-pro",
         {
           "model": "github-copilot/gemini-3.1-pro-preview",
           "variant": "high"
         },
         "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5.1",
-        "zhipuai-coding-plan/glm-5.1",
-        "xiaomi/mimo-v2-pro"
+        "zhipuai-coding-plan/glm-5.1"
       ]
     },
     "deep": {
@@ -187,7 +185,7 @@
       ]
     },
     "unspecified-low": {
-      "model": "openai/gpt-5.3-codex",
+      "model": "openai/gpt-5.4",
       "variant": "medium",
       "fallback_models": [
         "zai-coding-plan/glm-5.1",
@@ -260,5 +258,6 @@
         "session_search"
       ]
     }
-  }
+  },
+  "_migrations": ["model-version:openai/gpt-5.3-codex->openai/gpt-5.4"]
 }
