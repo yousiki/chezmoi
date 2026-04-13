@@ -9,6 +9,8 @@
           "variant": "medium"
         },
         "zai-coding-plan/glm-5",
+        "zhipuai-coding-plan/glm-5",
+        "zai-coding-plan/glm-5.1",
         "zhipuai-coding-plan/glm-5.1",
         "xiaomi/mimo-v2-pro",
         "opencode/big-pickle"
@@ -113,5 +115,13 @@
     "commit_footer": true,
     "include_co_authored_by": true,
     "git_env_prefix": "GIT_MASTER=1"
+  },
+  "claude_code": {
+    "agents": false,
+    "commands": false,
+    "hooks": false,
+    "mcp": false,
+    "plugins": false,
+    "skills": false
   }
 }
