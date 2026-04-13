@@ -10,6 +10,12 @@
         "source": "github",
         "repo": "gastownhall/beads"
       }
+    },
+    "astral-sh": {
+      "source": {
+        "source": "github",
+        "repo": "astral-sh/claude-code-plugins"
+      }
     }
   },
   "env": {
@@ -28,6 +34,17 @@
           {
             "type": "command",
             "command": "[ -f $HOME/.claude/hooks/nono-hook.sh ] && $HOME/.claude/hooks/nono-hook.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f $HOME/.claude/hooks/rtk-rewrite.sh ] && $HOME/.claude/hooks/rtk-rewrite.sh"
           }
         ]
       }
