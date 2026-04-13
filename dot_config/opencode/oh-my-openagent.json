@@ -10,7 +10,8 @@
         },
         "zai-coding-plan/glm-5",
         "zhipuai-coding-plan/glm-5.1",
-        "xiaomi/mimo-v2-pro"
+        "xiaomi/mimo-v2-pro",
+        "opencode/big-pickle"
       ]
     },
     "hephaestus": {
