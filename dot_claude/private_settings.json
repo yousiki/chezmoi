@@ -5,16 +5,22 @@
     "claude-code-setup@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
+    "astral-sh": {
+      "source": {
+        "source": "github",
+        "repo": "astral-sh/claude-code-plugins"
+      }
+    },
     "beads-marketplace": {
       "source": {
         "source": "github",
         "repo": "gastownhall/beads"
       }
     },
-    "astral-sh": {
+    "claude-code-lsps": {
       "source": {
         "source": "github",
-        "repo": "astral-sh/claude-code-plugins"
+        "repo": "yousiki/claude-code-lsps"
       }
     }
   },
