@@ -47,12 +47,6 @@
         "repo": "gastownhall/beads"
       }
     },
-    "claude-code-lsps": {
-      "source": {
-        "source": "github",
-        "repo": "yousiki/claude-code-lsps"
-      }
-    },
     "openai-codex": {
       "source": {
         "source": "github",
