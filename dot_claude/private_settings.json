@@ -35,26 +35,22 @@
     "codex@openai-codex": true
   },
   "extraKnownMarketplaces": {
-    "astral-sh": {
-      "source": {
-        "source": "github",
-        "repo": "astral-sh/claude-code-plugins"
-      }
-    },
-    "beads-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "gastownhall/beads"
-      }
-    },
     "openai-codex": {
       "source": {
         "source": "github",
         "repo": "openai/codex-plugin-cc"
-      }
+      },
+      "autoUpdate": true
+    },
+    "yousiki-claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "yousiki/claude-plugins"
+      },
+      "autoUpdate": true
     }
   },
+  "language": "简体中文",
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "language": "简体中文"
+  "skipAutoPermissionPrompt": true
 }
