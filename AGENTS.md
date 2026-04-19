@@ -14,7 +14,6 @@ This repository is a `chezmoi` source state for cross-platform macOS and Linux d
 - Agent instructions: `AGENTS.md`
 - Human workflow and repo map: `README.md`
 - Repo-only exclusions: `.chezmoiignore`
-- Formatting rules: `treefmt.toml`
 - macOS packages: `dot_config/homebrew/Brewfile`
 - Lifecycle scripts: `.chezmoiscripts/`
 
@@ -60,15 +59,13 @@ chezmoi execute-template < path/to/file.tmpl
 ### Formatting
 
 ```sh
-treefmt
 shfmt -w -i 2 -ci <file>
 taplo format <file>
 prettier --write <file>
 ```
 
-- `treefmt.toml` is the formatter contract.
 - Shell uses `shfmt -w -i 2 -ci`, TOML uses `taplo format`, and Markdown uses `prettier --write`.
-- `prettier`, `shfmt`, `taplo`, and `treefmt` are installed via `dot_config/homebrew/Brewfile`.
+- `prettier` can be run on demand via `bunx prettier@latest`; `shfmt` and `taplo` must be installed separately (not managed by the Brewfile).
 
 ### Package management
 
@@ -86,7 +83,7 @@ brew bundle dump --force --describe --file ~/.config/homebrew/Brewfile
 - No automated test suite is currently defined in this repository.
 - No single-test command exists because there is no repo-level test runner.
 - Do not invent `npm test`, `bun test`, `pytest`, `make test`, or similar commands unless you add the tooling first.
-- For verification, use the narrowest real check available: `chezmoi diff`, `chezmoi execute-template`, `treefmt`, or a targeted tool for the file type you changed.
+- For verification, use the narrowest real check available: `chezmoi diff`, `chezmoi execute-template`, or a targeted tool for the file type you changed.
 
 ## Code style and editing rules
 
@@ -99,7 +96,7 @@ brew bundle dump --force --describe --file ~/.config/homebrew/Brewfile
 
 ### Formatting and whitespace
 
-- Follow `treefmt.toml` instead of local taste.
+- Follow the per-tool formatting rules above instead of local taste.
 - Shell indentation is 2 spaces.
 - Keep Markdown and TOML formatted by the configured tools.
 - Preserve a clean, minimal style; avoid decorative comments and dense inline explanations.
@@ -143,7 +140,7 @@ brew bundle dump --force --describe --file ~/.config/homebrew/Brewfile
 ## Repo-only files and docs
 
 - Treat `.chezmoiignore` as part of every top-level repo-doc change.
-- `README.md`, `AGENTS.md`, `treefmt.toml`, `.gitignore`, and similar repo-only files are intentionally ignored by `chezmoi` and should stay that way unless you deliberately want them deployed to `$HOME`.
+- `README.md`, `AGENTS.md`, `.gitignore`, and similar repo-only files are intentionally ignored by `chezmoi` and should stay that way unless you deliberately want them deployed to `$HOME`.
 - Before adding a new top-level repo-only file, update `.chezmoiignore`.
 
 ## Things to preserve

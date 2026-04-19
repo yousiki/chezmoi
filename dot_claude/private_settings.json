@@ -31,7 +31,9 @@
   },
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
-    "codex@openai-codex": true
+    "codex@openai-codex": true,
+    "context7@yousiki-claude-plugins": true,
+    "deepwiki@yousiki-claude-plugins": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -49,7 +51,6 @@
       "autoUpdate": true
     }
   },
-  "language": "简体中文",
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true
 }

@@ -4,5 +4,4 @@ docs/**
 .codex/**
 .sisyphus/**
 .gitignore
-treefmt.toml
 .config/opencode/package.json
