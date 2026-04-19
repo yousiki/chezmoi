@@ -5,3 +5,11 @@ docs/**
 .sisyphus/**
 .gitignore
 .config/opencode/package.json
+
+# tokscale stores settings in different platform-specific config directories.
+{{ if ne .chezmoi.os "darwin" }}
+Library
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config/tokscale
+{{ end }}
