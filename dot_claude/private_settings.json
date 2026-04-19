@@ -33,7 +33,8 @@
     "commit-commands@claude-plugins-official": true,
     "codex@openai-codex": true,
     "context7@yousiki-claude-plugins": true,
-    "deepwiki@yousiki-claude-plugins": true
+    "deepwiki@yousiki-claude-plugins": true,
+    "tokscale-auto-submit@yousiki-claude-plugins": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
