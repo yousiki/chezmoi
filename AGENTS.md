@@ -26,8 +26,8 @@ This repository is a `chezmoi` source state for cross-platform macOS and Linux d
 
 - `dot_zshrc` is the interactive zsh entrypoint.
 - `dot_zprofile` handles login-shell environment setup.
-- `dot_config/zsh/10-base.zsh`, `20-zim.zsh`, and `30-local.zsh` load in numeric order.
-- `.chezmoiscripts/run_onchange_before_10-brew-bundle.sh.tmpl` is the only current lifecycle script.
+- `dot_config/zsh/10-base.zsh`, `15-agent-cli.zsh`, `20-zim.zsh`, and `30-local.zsh` load in numeric order.
+- Current lifecycle scripts are `.chezmoiscripts/run_onchange_before_10-brew-bundle.sh.tmpl` and `.chezmoiscripts/run_onchange_after_20-zim-install.sh.tmpl`.
 - `dot_config/opencode/` contains local editor/OpenCode integration config, not a repo build system.
 
 ## Build, lint, test, and validation
@@ -147,6 +147,7 @@ brew bundle dump --force --describe --file ~/.config/homebrew/Brewfile
 
 - `dot_config/homebrew/Brewfile` remains the macOS package source of truth.
 - `.chezmoiscripts/run_onchange_before_10-brew-bundle.sh.tmpl` remains the active package-apply hook.
+- `.chezmoiscripts/run_onchange_after_20-zim-install.sh.tmpl` remains the active Zim refresh hook.
 
 ## Practical review checklist
 
