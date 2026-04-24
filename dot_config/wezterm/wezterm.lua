@@ -237,6 +237,12 @@ config.mouse_bindings = {
     mods = 'NONE',
     action = wezterm.action.CompleteSelection('ClipboardAndPrimarySelection'),
   },
+  -- Pair Down+Up so mouse-aware TUIs receive a balanced click sequence
+  {
+    event = { Down = { streak = 1, button = 'Left' } },
+    mods = 'CMD',
+    action = wezterm.action.Nop,
+  },
   {
     event = { Up = { streak = 1, button = 'Left' } },
     mods = 'CMD',
