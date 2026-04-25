@@ -14,7 +14,7 @@
     "preferredEditor": "",
     "renameSelectsExistingName": true,
     "reorderOnNotification": true,
-    "sendAnonymousTelemetry": false,
+    "sendAnonymousTelemetry": true,
     "warnBeforeQuit": true
   },
 
@@ -31,8 +31,8 @@
   "sidebar": {
     "branchLayout": "vertical",
     "hideAllDetails": false,
-    "openPortLinksInCmuxBrowser": true,
-    "openPullRequestLinksInCmuxBrowser": true,
+    "openPortLinksInCmuxBrowser": false,
+    "openPullRequestLinksInCmuxBrowser": false,
     "showBranchDirectory": true,
     "showCustomMetadata": true,
     "showLog": true,
@@ -84,10 +84,6 @@
     "socketPassword": ""
   },
 
-  "customCommands": {
-    "trustedDirectories": []
-  },
-
   "browser": {
     "defaultSearchEngine": "google",
     "hostsToOpenInEmbeddedBrowser": [],
@@ -98,7 +94,7 @@
       "0.0.0.0",
       "*.localtest.me"
     ],
-    "interceptTerminalOpenCommandInCmuxBrowser": true,
+    "interceptTerminalOpenCommandInCmuxBrowser": false,
     "openTerminalLinksInCmuxBrowser": false,
     "reactGrabVersion": "0.1.29",
     "showImportHintOnBlankTabs": true,
