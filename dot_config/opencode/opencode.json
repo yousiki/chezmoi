@@ -1,94 +1,183 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["oh-my-openagent@latest"],
+  "plugin": [
+    "oh-my-openagent@latest"
+  ],
   "mcp": {
     "deepwiki": {
-      "enabled": true,
       "type": "remote",
-      "url": "https://mcp.deepwiki.com/mcp"
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": true
     },
     "duckduckgo": {
-      "enabled": true,
       "type": "local",
-      "command": ["uvx", "duckduckgo-mcp-server@latest"]
+      "command": [
+        "uvx",
+        "duckduckgo-mcp-server@latest"
+      ],
+      "enabled": true
     },
     "edgeone-pages": {
-      "enabled": true,
       "type": "local",
-      "command": ["bunx", "edgeone-pages-mcp-fullstack@latest"]
+      "command": [
+        "bunx",
+        "edgeone-pages-mcp-fullstack@latest"
+      ],
+      "enabled": true
     },
     "notion": {
-      "enabled": true,
       "type": "remote",
-      "url": "https://mcp.notion.com/mcp"
+      "url": "https://mcp.notion.com/mcp",
+      "enabled": true
     },
     "linear": {
-      "enabled": true,
       "type": "remote",
-      "url": "https://mcp.linear.app/mcp"
+      "url": "https://mcp.linear.app/mcp",
+      "enabled": true
     },
     "beads": {
-      "enabled": true,
       "type": "local",
-      "command": ["uvx", "beads-mcp@latest"]
+      "command": [
+        "uvx",
+        "beads-mcp@latest"
+      ],
+      "enabled": true
     }
   },
   "lsp": {
     "typescript": {
-      "command": ["bunx", "typescript-language-server@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "typescript-language-server@latest",
+        "--stdio"
+      ]
     },
     "vue": {
-      "command": ["bunx", "@vue/language-server@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "@vue/language-server@latest",
+        "--stdio"
+      ]
     },
     "biome": {
-      "command": ["bunx", "@biomejs/biome@latest", "lsp-proxy", "--stdio"]
+      "command": [
+        "bunx",
+        "@biomejs/biome@latest",
+        "lsp-proxy",
+        "--stdio"
+      ]
     },
     "svelte": {
-      "command": ["bunx", "svelte-language-server@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "svelte-language-server@latest",
+        "--stdio"
+      ]
     },
     "astro": {
-      "command": ["bunx", "@astrojs/language-server@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "@astrojs/language-server@latest",
+        "--stdio"
+      ]
     },
     "yaml-ls": {
-      "command": ["bunx", "yaml-language-server@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "yaml-language-server@latest",
+        "--stdio"
+      ]
     },
     "php intelephense": {
-      "command": ["bunx", "intelephense@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "intelephense@latest",
+        "--stdio"
+      ]
     },
     "bash": {
-      "command": ["bunx", "bash-language-server@latest", "start"]
+      "command": [
+        "bunx",
+        "bash-language-server@latest",
+        "start"
+      ]
     },
     "dockerfile": {
-      "command": ["bunx", "dockerfile-language-server-nodejs@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "dockerfile-language-server-nodejs@latest",
+        "--stdio"
+      ]
     },
     "pyright": {
-      "command": ["uvx", "basedpyright@latest", "--stdio"]
+      "command": [
+        "uvx",
+        "basedpyright@latest",
+        "--stdio"
+      ]
     },
     "ty": {
-      "command": ["uvx", "ty@latest", "server"]
+      "command": [
+        "uvx",
+        "ty@latest",
+        "server"
+      ]
     },
     "oxlint": {
-      "command": ["bunx", "oxlint@latest", "--lsp"]
+      "command": [
+        "bunx",
+        "oxlint@latest",
+        "--lsp"
+      ]
     },
     "prisma": {
-      "command": ["bunx", "@prisma/language-server@latest", "--stdio"]
+      "command": [
+        "bunx",
+        "@prisma/language-server@latest",
+        "--stdio"
+      ]
     },
     "clangd": {
-      "command": ["bunx", "clangd@latest", "--background-index", "--clang-tidy"]
+      "command": [
+        "bunx",
+        "clangd@latest",
+        "--background-index",
+        "--clang-tidy"
+      ]
     }
   },
   "formatter": {
     "prettier": {
-      "command": ["bunx", "prettier@latest", "--write", "$FILE"]
+      "command": [
+        "bunx",
+        "prettier@latest",
+        "--write",
+        "$FILE"
+      ]
     },
     "biome": {
-      "command": ["bunx", "@biomejs/biome@latest", "format", "--write", "$FILE"]
+      "command": [
+        "bunx",
+        "@biomejs/biome@latest",
+        "format",
+        "--write",
+        "$FILE"
+      ]
     },
     "oxfmt": {
-      "command": ["bunx", "oxfmt@latest", "$FILE"]
+      "command": [
+        "bunx",
+        "oxfmt@latest",
+        "$FILE"
+      ]
     },
     "ruff": {
-      "command": ["uvx", "ruff@latest", "format", "$FILE"]
+      "command": [
+        "uvx",
+        "ruff@latest",
+        "format",
+        "$FILE"
+      ]
     },
     "air": {
       "command": [
@@ -101,10 +190,20 @@
       ]
     },
     "ktlint": {
-      "command": ["bunx", "@naturalcycles/ktlint@latest", "-F", "$FILE"]
+      "command": [
+        "bunx",
+        "@naturalcycles/ktlint@latest",
+        "-F",
+        "$FILE"
+      ]
     },
     "clang-format": {
-      "command": ["bunx", "@wasm-fmt/clang-format@latest", "-i", "$FILE"]
+      "command": [
+        "bunx",
+        "@wasm-fmt/clang-format@latest",
+        "-i",
+        "$FILE"
+      ]
     }
   }
 }
