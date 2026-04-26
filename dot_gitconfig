@@ -14,3 +14,8 @@
 [user]
 	name = yousiki
 	email = you.siki@outlook.com
+
+[includeIf "hasconfig:remote.*.url:git@github.com:yousiki/**"]
+	path = ~/.gitconfig-gh-yousiki
+[includeIf "hasconfig:remote.*.url:https://github.com/yousiki/**"]
+	path = ~/.gitconfig-gh-yousiki
