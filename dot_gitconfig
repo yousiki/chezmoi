@@ -1,19 +1,9 @@
-{{- if eq .chezmoi.os "darwin" -}}
 [credential "https://github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-{{- end }}
-{{- if eq .chezmoi.os "linux" -}}
-[credential "https://github.com"]
-	helper =
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !/usr/bin/gh auth git-credential
-{{- end }}
 [init]
 	defaultBranch = main
 [filter "lfs"]
@@ -21,5 +11,6 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
-[include]
-	path = ~/.gitconfig.local
+[user]
+	name = yousiki
+	email = you.siki@outlook.com
