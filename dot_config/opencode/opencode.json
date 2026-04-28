@@ -17,14 +17,6 @@
       ],
       "enabled": true
     },
-    "edgeone-pages": {
-      "type": "local",
-      "command": [
-        "bunx",
-        "edgeone-pages-mcp-fullstack@latest"
-      ],
-      "enabled": true
-    },
     "notion": {
       "type": "remote",
       "url": "https://mcp.notion.com/mcp",
@@ -35,14 +27,6 @@
       "url": "https://mcp.linear.app/mcp",
       "enabled": true
     },
-    "beads": {
-      "type": "local",
-      "command": [
-        "uvx",
-        "beads-mcp@latest"
-      ],
-      "enabled": true
-    }
   },
   "lsp": {
     "typescript": {

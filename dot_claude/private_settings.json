@@ -34,7 +34,7 @@
     "codex@openai-codex": true,
     "context7@yousiki-claude-plugins": true,
     "deepwiki@yousiki-claude-plugins": true,
-    "tokscale-auto-submit@yousiki-claude-plugins": true
+    "andrej-karpathy-skills@karpathy-skills": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -50,9 +50,15 @@
         "repo": "yousiki/claude-plugins"
       },
       "autoUpdate": true
+    },
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "forrestchang/andrej-karpathy-skills"
+      }
     }
   },
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
