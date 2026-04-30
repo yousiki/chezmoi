@@ -56,6 +56,12 @@
         "source": "github",
         "repo": "forrestchang/andrej-karpathy-skills"
       }
+    },
+    "waza": {
+      "source": {
+        "source": "github",
+        "repo": "tw93/Waza"
+      }
     }
   },
   "skipDangerousModePermissionPrompt": true,
