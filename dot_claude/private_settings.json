@@ -34,7 +34,8 @@
     "codex@openai-codex": true,
     "context7@yousiki-claude-plugins": true,
     "deepwiki@yousiki-claude-plugins": true,
-    "andrej-karpathy-skills@karpathy-skills": true
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "warp@claude-code-warp": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -61,6 +62,12 @@
       "source": {
         "source": "github",
         "repo": "tw93/Waza"
+      }
+    },
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
       }
     }
   },

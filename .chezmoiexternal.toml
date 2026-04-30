@@ -22,6 +22,22 @@ stripComponents = 2
 include = ["*/themes/catppuccin-*.ron"]
 refreshPeriod = "168h"
 
+[".warp/themes"]
+type = "archive"
+url = "https://github.com/catppuccin/warp/archive/refs/heads/main.tar.gz"
+exact = true
+stripComponents = 2
+include = ["*/themes/*.yml"]
+refreshPeriod = "168h"
+
+[".config/warp/themes"]
+type = "archive"
+url = "https://github.com/catppuccin/warp/archive/refs/heads/main.tar.gz"
+exact = true
+stripComponents = 2
+include = ["*/themes/*.yml"]
+refreshPeriod = "168h"
+
 [".config/yazi/catppuccin"]
 type = "archive"
 url = "https://github.com/catppuccin/yazi/archive/refs/heads/main.tar.gz"
