@@ -57,7 +57,7 @@ config.initial_rows = 28
 config.window_decorations = 'INTEGRATED_BUTTONS|RESIZE'
 config.window_background_opacity = 1.0
 config.text_background_opacity = 1.0
-config.window_padding = { left = '30px', right = '30px', top = '30px', bottom = '0px' }
+config.window_padding = { left = '30px', right = '30px', top = '50px', bottom = '0px' }
 
 config.window_frame = {
   font = wezterm.font({ family = 'Maple Mono NF CN', weight = 'Regular' }),
