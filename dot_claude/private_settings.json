@@ -23,7 +23,7 @@
     "codex@openai-codex": true,
     "context7@yousiki-claude-plugins": true,
     "deepwiki@yousiki-claude-plugins": true,
-    "andrej-karpathy-skills@karpathy-skills": true,
+    "andrej-karpathy-skills@karpathy-skills": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
