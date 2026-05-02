@@ -1,4 +1,6 @@
-background-opacity = 0.9
+background-opacity = 0.95
+window-padding-x = 4,4
+window-padding-y = 2,4
 copy-on-select = true
 font-family = Maple Mono NF CN
 keybind = alt+backspace=text:\x1b\x7f

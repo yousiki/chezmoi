@@ -1,191 +1,177 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "oh-my-openagent@latest"
-  ],
+  "plugin": ["oh-my-openagent@latest"],
   "mcp": {
     "deepwiki": {
       "type": "remote",
       "url": "https://mcp.deepwiki.com/mcp",
       "enabled": true
     },
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "--package",
+        "chrome-devtools-mcp@latest",
+        "chrome-devtools-mcp"
+      ],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "--package",
+        "@playwright/mcp@latest",
+        "playwright-mcp"
+      ],
+      "enabled": true
+    },
     "duckduckgo": {
       "type": "local",
       "command": [
         "uvx",
-        "duckduckgo-mcp-server@latest"
+        "--refresh",
+        "--with",
+        "duckduckgo-mcp-server",
+        "duckduckgo-mcp-server"
       ],
       "enabled": true
-    },
-    "notion": {
-      "type": "remote",
-      "url": "https://mcp.notion.com/mcp",
-      "enabled": true
-    },
-    "linear": {
-      "type": "remote",
-      "url": "https://mcp.linear.app/mcp",
-      "enabled": true
-    },
+    }
   },
   "lsp": {
     "typescript": {
       "command": [
         "bunx",
+        "--package",
+        "typescript@latest",
+        "--package",
         "typescript-language-server@latest",
-        "--stdio"
-      ]
-    },
-    "vue": {
-      "command": [
-        "bunx",
-        "@vue/language-server@latest",
-        "--stdio"
-      ]
-    },
-    "biome": {
-      "command": [
-        "bunx",
-        "@biomejs/biome@latest",
-        "lsp-proxy",
-        "--stdio"
-      ]
-    },
-    "svelte": {
-      "command": [
-        "bunx",
-        "svelte-language-server@latest",
-        "--stdio"
-      ]
-    },
-    "astro": {
-      "command": [
-        "bunx",
-        "@astrojs/language-server@latest",
-        "--stdio"
-      ]
-    },
-    "yaml-ls": {
-      "command": [
-        "bunx",
-        "yaml-language-server@latest",
-        "--stdio"
-      ]
-    },
-    "php intelephense": {
-      "command": [
-        "bunx",
-        "intelephense@latest",
-        "--stdio"
-      ]
-    },
-    "bash": {
-      "command": [
-        "bunx",
-        "bash-language-server@latest",
-        "start"
-      ]
-    },
-    "dockerfile": {
-      "command": [
-        "bunx",
-        "dockerfile-language-server-nodejs@latest",
+        "typescript-language-server",
         "--stdio"
       ]
     },
     "pyright": {
       "command": [
-        "uvx",
-        "basedpyright@latest",
+        "bunx",
+        "--package",
+        "pyright@latest",
+        "pyright-langserver",
         "--stdio"
       ]
+    },
+    "basedpyright": {
+      "command": [
+        "uvx",
+        "--refresh",
+        "--with",
+        "basedpyright",
+        "basedpyright-langserver",
+        "--stdio"
+      ],
+      "extensions": [".py", ".pyi"]
     },
     "ty": {
-      "command": [
-        "uvx",
-        "ty@latest",
-        "server"
-      ]
+      "command": ["uvx", "--refresh", "--with", "ty", "ty", "server"],
+      "extensions": [".py", ".pyi"]
     },
-    "oxlint": {
+    "biome": {
       "command": [
         "bunx",
-        "oxlint@latest",
-        "--lsp"
+        "--package",
+        "@biomejs/biome@latest",
+        "biome",
+        "lsp-proxy"
       ]
     },
-    "prisma": {
+    "bash": {
       "command": [
         "bunx",
-        "@prisma/language-server@latest",
+        "--package",
+        "bash-language-server@latest",
+        "bash-language-server",
+        "start"
+      ]
+    },
+    "yaml-ls": {
+      "command": [
+        "bunx",
+        "--package",
+        "yaml-language-server@latest",
+        "yaml-language-server",
         "--stdio"
       ]
     },
-    "clangd": {
+    "tombi": {
+      "command": ["bunx", "--package", "tombi@latest", "tombi", "lsp"],
+      "extensions": [".toml"]
+    },
+    "vscode-html": {
       "command": [
         "bunx",
-        "clangd@latest",
-        "--background-index",
-        "--clang-tidy"
-      ]
+        "--package",
+        "vscode-langservers-extracted@latest",
+        "vscode-html-language-server",
+        "--stdio"
+      ],
+      "extensions": [".html", ".htm"]
+    },
+    "vscode-css": {
+      "command": [
+        "bunx",
+        "--package",
+        "vscode-langservers-extracted@latest",
+        "vscode-css-language-server",
+        "--stdio"
+      ],
+      "extensions": [".css", ".scss", ".less"]
+    },
+    "vscode-json": {
+      "command": [
+        "bunx",
+        "--package",
+        "vscode-langservers-extracted@latest",
+        "vscode-json-language-server",
+        "--stdio"
+      ],
+      "extensions": [".json", ".jsonc"]
     }
   },
   "formatter": {
-    "prettier": {
+    "ruff": {
       "command": [
-        "bunx",
-        "prettier@latest",
-        "--write",
+        "uvx",
+        "--refresh",
+        "--with",
+        "ruff",
+        "ruff",
+        "format",
         "$FILE"
       ]
     },
     "biome": {
       "command": [
         "bunx",
+        "--package",
         "@biomejs/biome@latest",
+        "biome",
         "format",
         "--write",
         "$FILE"
       ]
     },
-    "oxfmt": {
+    "prettier": {
       "command": [
         "bunx",
-        "oxfmt@latest",
-        "$FILE"
-      ]
-    },
-    "ruff": {
-      "command": [
-        "uvx",
-        "ruff@latest",
-        "format",
-        "$FILE"
-      ]
-    },
-    "air": {
-      "command": [
-        "uvx",
-        "--from",
-        "air-formatter@latest",
-        "air",
-        "format",
-        "$FILE"
-      ]
-    },
-    "ktlint": {
-      "command": [
-        "bunx",
-        "@naturalcycles/ktlint@latest",
-        "-F",
-        "$FILE"
-      ]
-    },
-    "clang-format": {
-      "command": [
-        "bunx",
-        "@wasm-fmt/clang-format@latest",
-        "-i",
+        "--package",
+        "prettier@latest",
+        "prettier",
+        "--write",
         "$FILE"
       ]
     }
