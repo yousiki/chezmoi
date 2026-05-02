@@ -25,7 +25,6 @@ config.font = wezterm.font_with_fallback({
 })
 config.font_size = 12.0
 config.line_height = 1.2
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 
 -- Switch font weight by theme: light needs heavier weight for readability
 local font_weight_overrides_by_window = {}
