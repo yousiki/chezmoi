@@ -5,19 +5,6 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "[ -f $HOME/.claude/hooks/rtk-rewrite.sh ] && $HOME/.claude/hooks/rtk-rewrite.sh"
-          }
-        ]
-      }
-    ]
-  },
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
     "codex@openai-codex": true,

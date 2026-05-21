@@ -135,8 +135,7 @@ themes where needed, for example `dot_config/bat/config`,
 
 ## Agent and editor config
 
-- `dot_claude/` contains Claude Code settings, RTK notes, and hooks for RTK
-  command rewriting and nono sandbox diagnostics.
+- `dot_claude/` contains Claude Code settings and plugin configuration.
 - `dot_config/opencode/` contains OpenCode config, MCP entries, LSP commands,
   formatter commands, TUI theme selection, and oh-my-openagent configuration.
 
