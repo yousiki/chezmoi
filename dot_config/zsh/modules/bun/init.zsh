@@ -1,5 +1,6 @@
-export BUN_INSTALL="${BUN_INSTALL:-$HOME/.cache/.bun}"
+export BUN_INSTALL="$HOME/.cache/bun"
 
-# Newer bun uses $BUN_INSTALL/bin; older versions default to ~/.bun/bin.
-[[ -d "$HOME/.bun/bin" ]] && path=("$HOME/.bun/bin" $path)
+# Remove legacy Bun install locations from inherited PATH before adding the managed one.
+path=("${(@)path:#$HOME/.bun/bin}")
+path=("${(@)path:#$HOME/.cache/.bun/bin}")
 [[ -d "${BUN_INSTALL}/bin" ]] && path=("${BUN_INSTALL}/bin" $path)
