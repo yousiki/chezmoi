@@ -19,3 +19,4 @@ typeset -a zsh_config_files=(
 for config_file in $zsh_config_files; do
   [[ -r "$config_file" ]] && source "$config_file"
 done
+
