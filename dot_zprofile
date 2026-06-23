@@ -6,8 +6,11 @@
 # User-local executables.
 export PATH="$HOME/.local/bin:$PATH"
 
-# Default editor for git, crontab, and other tools that spawn $EDITOR.
-export EDITOR="nvim"
+# Default editor.
+export VISUAL="nvim"
+export EDITOR="vim"
+
+# Activate homebrew.
 if command -v brew >/dev/null 2>&1; then
   eval "$(brew shellenv)"
 fi
